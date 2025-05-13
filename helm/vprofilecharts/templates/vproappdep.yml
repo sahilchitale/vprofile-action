@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: vproapp
-        image: ${{ secrets.ECR_REPOSITORY }}:latest
+        image: {{ .Values.appimage}}:{{ .Values.apptag}}
         ports:
         - name: vproapp-port
           containerPort: 8080
